@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Your email address where you want to receive messages
-const RECIPIENT_EMAIL = 'arunkumargaddam15@gmail.com';
+const RECIPIENT_EMAIL = 'gaddamarun15@gmail.com';
 
 // Contact form endpoint - using FormSubmit (free, no authentication required)
 app.post('/api/contact', async (req, res) => {

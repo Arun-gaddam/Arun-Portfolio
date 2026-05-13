@@ -199,7 +199,6 @@ const ErrorMessage = styled(MessageAlert)`
   color: #f44336;
 `;
 
-const WEB3FORMS_KEY_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const CONTACT_EMAIL = 'gaddamarun15@gmail.com';
 
 const Contact = () => {
@@ -229,10 +228,10 @@ const Contact = () => {
     try {
       const accessKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
 
-      if (!accessKey || !WEB3FORMS_KEY_PATTERN.test(accessKey)) {
+      if (!accessKey) {
         setMessage({
           type: 'error',
-          text: 'Contact form is not configured yet. Add a valid Web3Forms UUID in REACT_APP_WEB3FORMS_ACCESS_KEY.'
+          text: 'Contact form is not configured yet. Add REACT_APP_WEB3FORMS_ACCESS_KEY to your environment.'
         });
         return;
       }
