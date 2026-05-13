@@ -102,6 +102,8 @@ const SocialLink = styled.a`
 `;
 
 const Hero = () => {
+  const contactEmail = 'gaddamarun15@gmail.com';
+
   return (
     <HeroSection id="hero">
       <HeroContent>
@@ -137,7 +139,7 @@ const Hero = () => {
         >
           <ContactItem>
             <FaEnvelope />
-            <span>arunkumargaddam15@gmail.com</span>
+            <span>{contactEmail}</span>
           </ContactItem>
           <ContactItem>
             <FaPhone />
@@ -149,7 +151,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <SocialLink href="mailto:arunkumargaddam15@gmail.com" aria-label="Email">
+          <SocialLink href={`mailto:${contactEmail}`} aria-label="Email">
             <FaEnvelope />
           </SocialLink>
           <SocialLink href="tel:+13202915447" aria-label="Phone">

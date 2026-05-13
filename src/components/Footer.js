@@ -113,6 +113,8 @@ const BackToTop = styled(motion.button)`
 `;
 
 const Footer = () => {
+  const contactEmail = 'gaddamarun15@gmail.com';
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -123,7 +125,7 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaEnvelope />,
-      href: 'mailto:arunkumargaddam15@gmail.com',
+      href: `mailto:${contactEmail}`,
       label: 'Email'
     }
   ];

@@ -200,6 +200,7 @@ const ErrorMessage = styled(MessageAlert)`
 `;
 
 const WEB3FORMS_KEY_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+const CONTACT_EMAIL = 'gaddamarun15@gmail.com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -239,12 +240,10 @@ const Contact = () => {
       const web3FormsData = new FormData();
       web3FormsData.append('access_key', accessKey);
       web3FormsData.append('subject', `Portfolio Contact: ${formData.subject}`);
-      web3FormsData.append('from_name', formData.name);
-      web3FormsData.append('from_email', formData.email);
       web3FormsData.append('name', formData.name);
       web3FormsData.append('email', formData.email);
-      web3FormsData.append('message', `Name: ${formData.name}\nEmail: ${formData.email}\n\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`);
-      web3FormsData.append('to_email', 'arunkumargaddam15@gmail.com');
+      web3FormsData.append('message', formData.message);
+      web3FormsData.append('to_email', CONTACT_EMAIL);
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -281,8 +280,8 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       label: 'Email',
-      value: 'arunkumargaddam15@gmail.com',
-      href: 'mailto:arunkumargaddam15@gmail.com'
+      value: CONTACT_EMAIL,
+      href: `mailto:${CONTACT_EMAIL}`
     },
     {
       icon: <FaPhone />,

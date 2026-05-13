@@ -38,7 +38,7 @@ cd Arun-Portfolio
 npm install
 ```
 
-3. Create a `.env` file in the root directory:
+3. Create a `.env` file in the project root:
 ```env
 REACT_APP_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
 ```
@@ -75,11 +75,7 @@ This will:
 
 4. Your site will be live in a few minutes!
 
-**Note**: Make sure to set the `REACT_APP_WEB3FORMS_ACCESS_KEY` environment variable in your GitHub repository secrets if you want to use the contact form in production. However, since the key is already in the code, it should work as-is.
-
-## Environment Variables
-
-- `REACT_APP_WEB3FORMS_ACCESS_KEY`: Your Web3Forms access key for contact form submissions
+**Note**: The contact form reads the Web3Forms access key from your local `.env` file.
 
 ## License
 
